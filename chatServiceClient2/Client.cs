@@ -51,6 +51,7 @@ namespace ChatService.Client
             CheckMessageGap();
             byte[] buffer = Encoding.UTF8.GetBytes(message);
             Socket.Send(buffer, 0, buffer.Length, SocketFlags.None);
+
             LastMessageTime = DateTime.Now;
         }
 
