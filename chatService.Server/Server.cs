@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace ChatService.Server
+namespace ChatService.Server 
 {
     public class Server
     {
