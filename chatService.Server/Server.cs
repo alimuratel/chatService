@@ -74,7 +74,7 @@ namespace ChatService.Server
             currentSocket.Send(response);
         }
 
-        private void ShowMessage(int received)
+        public void ShowMessage(int received)
         {
             byte[] recBuf = new byte[received];
             Array.Copy(Buffer, recBuf, received);
