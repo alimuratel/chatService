@@ -8,12 +8,12 @@ namespace ChatService.Server
         {
             Console.Title = "The Server";
 
-            Console.WriteLine("Server Açılıyor.");
+            Console.WriteLine("Activating server...");
             var server = new Server(100);
             server.StartServer();
-            Console.WriteLine("Server Açıldı.");
+            Console.WriteLine("Server is active.");
 
-            Console.WriteLine("Server'ı kapatmak için herhangi bir düğmeye basabilirsin.");
+            Console.WriteLine("Press any key to close server.");
             Console.ReadLine();
         }
     }

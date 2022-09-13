@@ -14,11 +14,11 @@ namespace ChatService.Client
             var client = new Client(100);
             Console.Title = $"The Client #{client.ID}";
 
-            Console.WriteLine($"{client.ID} bağlanmaya çalışıyor");
+            Console.WriteLine($"{client.ID} trying to connect...");
             client.Connect();
-            Console.WriteLine($"{client.ID} Bağlandı.");
+            Console.WriteLine($"{client.ID} CONNECTED.");
 
-            Console.WriteLine($"{client.ID} Mesaj bekleniyor.");
+            Console.WriteLine($"{client.ID} started to listening...");
             client.Listen();
         }
 

@@ -57,7 +57,7 @@ namespace ChatService.Server
             catch (Exception ex)
             {
                 current.Close();
-                Console.WriteLine("Hata: {0}", ex.Message);
+                Console.WriteLine("Error: {0}", ex.Message);
                 return;
             }
 
@@ -70,7 +70,7 @@ namespace ChatService.Server
 
         private void SendInformation(Socket currentSocket)
         {
-            byte[] response = Encoding.ASCII.GetBytes("Mesaj Başarıyla Gönderildi.");
+            byte[] response = Encoding.ASCII.GetBytes("Message successfuly delivered.");
             currentSocket.Send(response);
         }
 
@@ -79,7 +79,7 @@ namespace ChatService.Server
             byte[] recBuf = new byte[received];
             Array.Copy(Buffer, recBuf, received);
             string message = Encoding.ASCII.GetString(recBuf);
-            Console.WriteLine("Mesaj: " + message);
+            Console.WriteLine("Message: " + message);
         }
     }
 }

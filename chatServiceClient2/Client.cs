@@ -56,7 +56,7 @@ namespace ChatService.Client
 
         private string GetMessage()
         {
-            Console.WriteLine("Mesajını Yaz:");
+            Console.WriteLine("Type your message: ....");
             return Console.ReadLine();
         }
 
@@ -65,7 +65,7 @@ namespace ChatService.Client
             DateTime now = DateTime.Now;
             if (now.Second == LastMessageTime.Second)
             {
-                Console.WriteLine("Saniyede 1 mesaj gönderebilirsin!");
+                Console.WriteLine("You can only send 1 message per second!");
                 TryCount++;
                 if (TryCount > 1)
                 {
